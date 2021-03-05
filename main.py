@@ -46,6 +46,9 @@ with open("NitroCodes.txt") as txtwriter:
             canuse.write(possiblecode)
             canuse.write("\n")
             canuse.close()
+        elif r.status_code == 429:
+            print(r.status_code," 請求過多，將於600秒後重試"))
+            time.sleep(600)
         else:
         	print(r.status_code," 不可用 | {} ".format(line.strip("\n")))
         	time.sleep(30)
