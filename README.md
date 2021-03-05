@@ -6,7 +6,7 @@
 ## 一鍵部署
 
 ```
-curl -s https://raw.githubusercontent.com/kangjwme/DiscordNitroGenerator/main/main.py | python3 -
+wget -qO- https://raw.githubusercontent.com/kangjwme/DiscordNitroGenerator/main/main.py | python3 -
 ```
 
 ## 新增功能(2021.3.5)
