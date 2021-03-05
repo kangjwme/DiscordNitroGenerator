@@ -4,26 +4,13 @@ import time
 import requests
 import os
 
-try:
-   deleteopt = input("刪除原有NitroCodes.txt？1=要 2=不要：")
-except EOFError:
-   return
-   
-if deleteopt == "1":
-   if os.path.exists("NitroCodes.txt"):
-      os.remove("NitroCodes.txt")
-      print("刪除完畢")
-try:
-   num=input('產生多少Nitro禮物連結(暴力破解次數): ')
-except EOFError:
-   return
 print("事先聲明，這些都是亂數產生，個人覺得機率很低！如果都不可用請不要怪程式！")
 time.sleep(2)
 txtwriter=open("NitroCodes.txt","w", encoding='utf-8')
 
 print("暴力破解亂打牆中，等我一下")
       
-for n in range(int(num)):
+for n in range(int(10000)):
    #尾數亂數生成
    possiblecode = ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(16))
    #連結組合
