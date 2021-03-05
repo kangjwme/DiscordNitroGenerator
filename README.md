@@ -3,5 +3,11 @@
 
 這程式純屬暴力，沒有任何科學依據～
 
+## 一鍵部署
+
+```
+curl -s https://raw.githubusercontent.com/kangjwme/DiscordNitroGenerator/main/m…
+```
+
 ## 新增功能(2021.3.5)
 可以直接掛機，可用的連結會存到NitroCanUseCodes裡面
