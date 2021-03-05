@@ -40,7 +40,11 @@ with open("NitroCodes.txt") as txtwriter:
 
         if r.status_code == 200:
             print(" 可用 | {} ".format(line.strip("\n")))
-            break
+            canuse=open("NitroCanUseCodes.txt","w", encoding='utf-8')
+            canuse.write('https://discord.gift/')
+            canuse.write(possiblecode)
+            canuse.write("\n")
+            canuse.close()
         else:
         	print(" 不可用 | {} ".format(line.strip("\n")))
         	
