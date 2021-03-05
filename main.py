@@ -32,6 +32,7 @@ txtwriter.close()
 #驗證連結可用性
 with open("NitroCodes.txt") as txtwriter:
     for line in txtwriter:
+        time.sleep(30)
         nitro = line.strip("\n")
 
         url = "https://discordapp.com/api/v6/entitlements/gift-codes/" + nitro + "?with_application=false&with_subscription_plan=true"
@@ -47,5 +48,7 @@ with open("NitroCodes.txt") as txtwriter:
             canuse.close()
         else:
         	print(" 不可用 | {} ".format(line.strip("\n")))
+            
+   
         	
 input("點擊Enter退出程式")
