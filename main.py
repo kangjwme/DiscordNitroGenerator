@@ -32,7 +32,7 @@ txtwriter.close()
 #驗證連結可用性
 with open("NitroCodes.txt") as txtwriter:
     for line in txtwriter:
-        time.sleep(30)
+        
         nitro = line.strip("\n")
 
         url = "https://discordapp.com/api/v6/entitlements/gift-codes/" + nitro + "?with_application=false&with_subscription_plan=true"
@@ -40,14 +40,15 @@ with open("NitroCodes.txt") as txtwriter:
         r = requests.get(url)
 
         if r.status_code == 200:
-            print(" 可用 | {} ".format(line.strip("\n")))
+            print(r.status_code," 可用 | {} ".format(line.strip("\n")))
             canuse=open("NitroCanUseCodes.txt","w", encoding='utf-8')
             canuse.write('https://discord.gift/')
             canuse.write(possiblecode)
             canuse.write("\n")
             canuse.close()
         else:
-        	print(" 不可用 | {} ".format(line.strip("\n")))
+        	print(r.status_code," 不可用 | {} ".format(line.strip("\n")))
+        	time.sleep(30)
             
    
         	
