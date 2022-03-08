@@ -12,7 +12,7 @@ print("暴力破解亂打牆中，等我一下")
       
 for n in range(int(10000)):
    #尾數亂數生成
-   possiblecode = ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(16))
+   possiblecode = ''.join(random.choice(string.ascii_uppercase + string.digits + string.ascii_lowercase) for _ in range(24))
    #連結組合
    txtwriter.write('https://discord.gift/')
    txtwriter.write(possiblecode)
